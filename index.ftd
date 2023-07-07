@@ -10,7 +10,7 @@
 license-url: https://github.com/fastn-community/business-card/blob/main/LICENSE
 current-package: fastn-community.github.io/business-card
 show-tabs: false
-site-title: Business Card
+github-url: https://github.com/fastn-community/business-card
 
 Business card typically include essential information such as the person's or
 company's name, job title, phone number, email address, and physical address.
@@ -108,13 +108,18 @@ boolean $open: false
 private string card-id: this-card
 
 -- ftd.column:
+
+-- ftd.row:
+spacing.fixed.px: 24
+
+-- ftd.column:
+width: fill-container
 id: $details.card-id
 
 -- ftd.column:
 if: { !details.open }
 width: fill-container
 height: fill-container
-$on-click$: $ftd.toggle($a = $details.open)
 
 -- front: $details.name
 company-name: $details.company-name
@@ -134,7 +139,6 @@ website: $details.website
 if: { details.open }
 width: fill-container
 height: fill-container
-$on-click$: $ftd.toggle($a = $details.open)
 
 -- back: $details.name
 company-name: $details.company-name
@@ -150,23 +154,49 @@ website: $details.website
 
 -- end: ftd.column
 
+-- end: ftd.column
+
+-- ftd.column:
+spacing.fixed.px: 12
+align-content: center
+
+-- ftd.text: Front
+role: $inherited.types.button-medium
+color: $inherited.colors.text-strong
+background.solid: $inherited.colors.cta-tertiary.base
+background.solid if { !details.open }: $inherited.colors.cta-primary.base
+padding.px: 6
+border-radius.px: 4
+min-width.fixed.px: 60
+text-align: center
+$on-click$: $ftd.set-bool($a = $details.open, v = false)
+
+-- ftd.text: Back
+role: $inherited.types.button-medium
+color: $inherited.colors.text-strong
+background.solid: $inherited.colors.cta-tertiary.base
+background.solid if { details.open }: $inherited.colors.cta-primary.base
+padding.px: 6
+border-radius.px: 4
+min-width.fixed.px: 60
+text-align: center
+$on-click$: $ftd.set-bool($a = $details.open, v = true)
+
 -- ftd.image:
 if: { details.open }
 src: $assets.files.assets.download.svg
 width.fixed.px: 30
-anchor.id: $details.card-id
-right.px: -40
-top.px: 0
-$on-click$: $utils.download-as-image(element_id = $details.card-id, filename = card-back.png)
+$on-click$: $utils.download-as-image(element_id = $details.card-id, filename = card-back.jpg)
 
 -- ftd.image:
 if: { !details.open }
 src: $assets.files.assets.download.svg
 width.fixed.px: 30
-anchor.id: $details.card-id
-right.px: -40
-top.px: 0
-$on-click$: $utils.download-as-image(element_id = $details.card-id, filename = card-front.png)
+$on-click$: $utils.download-as-image(element_id = $details.card-id, filename = card-front.jpg)
+
+-- end: ftd.column
+
+-- end: ftd.row
 
 -- end: ftd.column
 
