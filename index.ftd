@@ -1,5 +1,6 @@
 -- import: fastn-community.github.io/business-card/docs
 -- import: fastn-community.github.io/business-card
+-- import: fastn-stack.github.io/fastn-js/utils
 
 
 
@@ -104,14 +105,16 @@ optional string company-slogan:
 optional ftd.image-src qr-code:
 optional string website:
 boolean $open: false
+private string card-id: this-card
 
 -- ftd.column:
-$on-mouse-enter$: $ftd.set-bool($a = $details.open, v = true)
+id: $details.card-id
 
 -- ftd.column:
 if: { !details.open }
 width: fill-container
 height: fill-container
+$on-click$: $ftd.toggle($a = $details.open)
 
 -- front: $details.name
 company-name: $details.company-name
@@ -131,7 +134,7 @@ website: $details.website
 if: { details.open }
 width: fill-container
 height: fill-container
-$on-mouse-leave$: $ftd.set-bool($a = $details.open, v = false)
+$on-click$: $ftd.toggle($a = $details.open)
 
 -- back: $details.name
 company-name: $details.company-name
@@ -146,6 +149,24 @@ qr-code: $details.qr-code
 website: $details.website
 
 -- end: ftd.column
+
+-- ftd.image:
+if: { details.open }
+src: $assets.files.assets.download.svg
+width.fixed.px: 30
+anchor.id: $details.card-id
+right.px: -40
+top.px: 0
+$on-click$: $utils.download-as-image(element_id = $details.card-id, filename = card-back.png)
+
+-- ftd.image:
+if: { !details.open }
+src: $assets.files.assets.download.svg
+width.fixed.px: 30
+anchor.id: $details.card-id
+right.px: -40
+top.px: 0
+$on-click$: $utils.download-as-image(element_id = $details.card-id, filename = card-front.png)
 
 -- end: ftd.column
 
