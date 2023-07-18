@@ -87,7 +87,7 @@ link: integrate/
 -- end: ftd.mobile
 
 
--- cb.code: Source Code
+-- cb.code: Example usage
 
 \-- business-card.details: John Doe
 company-name: John Doe Pvt. Ltd.

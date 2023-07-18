@@ -41,11 +41,11 @@ And its perfectly fine to just put the fastn logo and "Package" next to it. Bori
 20. To highlight lines in code snippet or to show code snippet at all, use https://fastn-community.github.io/code-block/ not images.
 21. Among the two cta, add business card to existing is our primary cta, the other one is secondary, change the colors to reflect that.
 22. Also explanation of CTA comes below the CTA and our CTA is descriptive enough that we do not need the information. Nor we need the "Create your business card" heading.
-23. Change the code caption from "Source Code" to "Example usage".
-24. I think the two actions next to business card, flip and download, are too black. They are secondary actions, make them duller.
+23. Change the code caption from "Source Code" to "Example usage". - Fixed
+24. I think the two actions next to business card, flip and download, are too black. They are secondary actions, make them duller. - Fixed
 25. The package name box below "Business card" is too much visual noise. We can show the fastn-community.github.io/business-card on the right of the Business card.
 26. In the code block at the bottom we show the copy icon on mouse over. This is good, as it does not show visual noise. In the top we show the action icons always, which leads to visual noise.
-27. Make the "a fastn package" in the header a link to fastn.
+27. Make the "a fastn package" in the header a link to fastn. - Fixed
 28. On desktop the hamburger menu looks like a bug, it is def not acting like hamburger menu. Hamburger menu should be on mobile, and should be used to show navigation sidebar. On desktop remove the hamburger menu.
 
 
