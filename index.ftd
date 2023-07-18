@@ -301,7 +301,7 @@ spacing: space-around
 
 -- ftd.image: $front.logo
 if: { front.logo != NULL }
-width.fixed.px: 250
+max-width.fixed.px: 250
 
 -- end: ftd.column
 
@@ -520,7 +520,7 @@ align-content: center
 
 -- ftd.image: $back.logo
 if: { back.logo != NULL }
-width.fixed.px: 250
+max-width.fixed.px: 250
 
 -- ftd.text: $back.company-slogan
 if: { back.company-slogan != NULL }

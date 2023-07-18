@@ -11,7 +11,7 @@ Not that this is a site that is built with fastn
 They are two different messages
 
 4. Remove the license from the top. - Fixed
-5. Also the sidebar that shows when we click on the link is the main sidebar, show it when i visit the page. - Added links into sidebar.
+5. Also the sidebar that shows when we click on the link is the main sidebar, show it when i visit the page. - Fixed - Added links into sidebar.
 > Why are we hiding stuff is totally beyond me.
 Also its kind of wrong, what does build mean?
 Use the two button CTAs as the link on the sidebar as well - Fixed
