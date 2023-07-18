@@ -40,7 +40,7 @@ Build a new stand-alone business card from scratch
 
 -- site-doc.button: Create a site with business card
 link: create/
-;;link: https://github.com/fastn-community/my-card-template/generate
+secondary: true
 
 -- end: ftd.column
 

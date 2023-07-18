@@ -1,6 +1,6 @@
 Below UI feedback received from AmitU.
 
-1. Change the CTA of the two buttons to "Create a site with business card" and "Add business card to your existing site".
+1. Change the CTA of the two buttons to "Create a site with business card" and "Add business card to your existing site". - Fixed
 2. The buttons are too low, they must be visible above the fold.
 > Right now above the fold (without scrolling) the end user buttons are hidden and link for contributors is shown. These buttons are priority, why are we hiding the button?
 3. In the built with icon, is there a space between -- and built-with? Use a better font
@@ -10,14 +10,14 @@ We need an icon to represent this is a fastn package meant to be used by others
 Not that this is a site that is built with fastn
 They are two different messages
 
-4. Remove the license from the top. 
-5. Also the sidebar that shows when we click on the link is the main sidebar, show it when i visit the page.
+4. Remove the license from the top. - Fixed
+5. Also the sidebar that shows when we click on the link is the main sidebar, show it when i visit the page. - Added links into sidebar.
 > Why are we hiding stuff is totally beyond me.
 Also its kind of wrong, what does build mean?
-Use the two button CTAs as the link on the sidebar as well
-6. put both the important links on sidebar and delete the garbage contribute button
+Use the two button CTAs as the link on the sidebar as well - Fixed
+6. put both the important links on sidebar and delete the garbage contribute button - Fixed
 > (our end user does not care about contribute, but we are always showing that)
-7. Of the two, add to existing is the primary cta, and create site is secondary
+7. Of the two, add to existing is the primary cta, and create site is secondary - Fixed
 8. make the top of the site look like hero section
 9. Get rid of sidebar, we have only three pages, the links can be in the header, 
 > why do we need the sidebar?
